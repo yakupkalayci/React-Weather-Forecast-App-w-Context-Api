@@ -2,6 +2,8 @@ import { useContext } from "react";
 import WeatherContext from "../../context/WeatherContext";
 import timeConverter from "../../context/getDay";
 
+import './style.modules.css';
+
 function WeatherCards() {
   const data = useContext(WeatherContext);
   if(!Array.isArray(data?.weatherData)) return <div>Loading....</div>
@@ -31,6 +33,7 @@ function WeatherCards() {
               width: "190px",
               height: "200px",
             }}
+            id={index === 0 ? "today" : ""}
           >
             <div>{timeConverter(weather.dt)}</div>
             <div>
