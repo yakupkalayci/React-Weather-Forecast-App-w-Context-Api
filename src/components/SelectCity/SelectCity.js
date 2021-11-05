@@ -6,7 +6,11 @@ function SelectCity() {
     const data = useContext(WeatherContext);
 
     const handleChange = (e) => {
-        data.setCity(e.target.value);
+       data.cities.forEach((item, index) => {
+           if(item.name === e.target.value) {
+               data.setCity(data.cities[index]);
+           }
+       })
     }
 
     return (
