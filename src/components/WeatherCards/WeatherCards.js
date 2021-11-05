@@ -40,10 +40,10 @@ function WeatherCards() {
                 <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} />
             </div>
             <div style={{marginTop:"10px"}}>{weather.weather[0].main}</div>
-            <div style={{marginTop:"10px"}}>
-              <span>{weather.temp.min}</span>
+            <div style={{marginTop:"10px", display:"flex", justifyContent:"center", gap:"0.5rem"}}>
+              <span>{Math.round(weather.temp.min)}&#176;</span>
               <span>/</span>
-              <span>{weather.temp.max}</span>
+              <span>{Math.round(weather.temp.max)}&#176;</span>
             </div>
           </div>
         ))}
