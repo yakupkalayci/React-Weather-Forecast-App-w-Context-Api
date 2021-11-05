@@ -1,12 +1,16 @@
 import "./App.css";
 import Container from "./components/Container/Container";
-import {WeatherContextProvider} from "./context/WeatherContext";
+import { WeatherContextProvider } from "./context/WeatherContext";
 
 function App() {
   return (
-    <WeatherContextProvider>
-      <Container />
-    </WeatherContextProvider>
+    <div className="App">
+      <h1>Weather Forecast App</h1>
+      <hr />
+      <WeatherContextProvider>
+        <Container />
+      </WeatherContextProvider>
+    </div>
   );
 }
 

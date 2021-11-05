@@ -1,17 +1,15 @@
-import React from 'react'
+import SelectCity from "../SelectCity/SelectCity";
+import WeatherCards from "../WeatherCards/WeatherCards";
 
-import SelectCity from '../SelectCity/SelectCity'
-import WeatherCards from '../WeatherCards/WeatherCards'
-import WeatherCard from '../WeatherCard/WeatherCard'
+
 
 function Container() {
-    return (
-        <div>
-            <SelectCity />
-            <WeatherCards />
-            <WeatherCard />
-        </div>
-    )
+  return (
+    <div style={{marginTop:"3rem"}}>
+      <SelectCity />
+      <WeatherCards />
+    </div>
+  );
 }
 
-export default Container
+export default Container;
